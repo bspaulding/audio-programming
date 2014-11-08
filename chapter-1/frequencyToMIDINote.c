@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
   double lowerBoundNoteFrequency = c0 * pow(semitone_ratio, lowerBoundNote);
   double deviation = (midiNoteFrequency - frequency) / (lowerBoundNoteFrequency - midiNoteFrequency) * 100.0;
 
-  printf("The nearest MIDI note to the frequency %f is %d (%fhz) or %d (%fhz) (pitchbend %f percent)\n", frequency, midinote, midiNoteFrequency, lowerBoundNote, lowerBoundNoteFrequency, deviation);
+  printf("The nearest MIDI note to the frequency %f is %d (pitchbend %f percent)\n", frequency, midinote, deviation);
 
   return 0;
 }
